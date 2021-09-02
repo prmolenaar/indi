@@ -1198,6 +1198,15 @@ add_executable(indi_deepskydad_af3_focus ${deepskydad_af3_SRC})
 target_link_libraries(indi_deepskydad_af3_focus indidriver)
 install(TARGETS indi_deepskydad_af3_focus RUNTIME DESTINATION bin)
 
+################ PIC16f84 Focuser ################
+
+SET(pic16f84focuser_SRC
+    ${CMAKE_CURRENT_SOURCE_DIR}/drivers/focuser/pic16f84focuser.cpp)
+
+add_executable(indi_pic16f84focuser_focus ${pic16f84focuser_SRC})
+target_link_libraries(indi_pic16f84focuser_focus indidriver)
+install(TARGETS indi_pic16f84focuser_focus RUNTIME DESTINATION bin)
+
 ################ JMI Smart Focus Focuser ################
 
 SET(smartfocus_SRC
